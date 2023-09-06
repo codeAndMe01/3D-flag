@@ -1,0 +1,84 @@
+body{
+    perspective: 300px;
+
+    background-image: url(https://i.pinimg.com/originals/4f/98/a2/4f98a2c314cd2a207e0772b4e14118e4.jpg);
+    background-size: cover; /* Optional: Adjust to your needs */
+    background-repeat: no-repeat;
+   
+}
+
+
+div{
+    width: 350px;
+    height: 200px;
+    /* border: 2px solid black; */
+
+    box-shadow: 3px 4px 25px 2px rgb(8, 0, 0);
+   
+
+}
+
+
+
+
+
+
+
+
+.front{
+
+    /* transition-duration: 2s; */
+
+    z-index: 1;
+
+    backface-visibility: hidden;
+}
+
+.back{
+  
+    background-image: linear-gradient(to right, red , yellow);
+    text-align: center;
+    color: white;
+
+    align-items: center;
+    
+   
+    /* z index make this div above cause itsa page number/   */
+
+    transform: rotateY(180deg);
+
+
+}
+
+section{
+    position: relative;  
+    /* to merge the div's onto each other */
+
+    width: 350px;
+    height: 200px;
+     margin: 200px 500px;
+
+    transition-duration: 2s;
+
+    transform-style: preserve-3d;
+}
+
+section:hover{
+ 
+    transform: rotateY(180deg);
+
+
+}
+
+.front , .back{
+    position: absolute;
+}
+
+
+
+img{
+  height: 100%;
+  width: 100%;
+}
+
+
